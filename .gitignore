@@ -1,0 +1,5 @@
+# vscode
+.pio/*
+/mqtt/test
+
+# mini program

@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <view>
+    <button type="primary" bindtap="connectMQTT">点击</button>
+    <button type="primary" bindtap="sendMessage">开灯</button>
+    <button type="primary" bindtap="sendMessageb">关灯</button>
+  </view>
+</view>
