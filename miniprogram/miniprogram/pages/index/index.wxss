@@ -1,0 +1,11 @@
+Page {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+}
+.container {
+  width: 100%;
+}
+button {
+  width: 100%!important;
+  margin: 20rpx;
+}

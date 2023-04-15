@@ -1,8 +1,23 @@
 <!--index.wxml-->
+<view style="margin-bottom:20rpx"></view>
+<view>连接状态：{{connectStatus?'已连接':'未连接'}}</view>
+<view style="margin-bottom:20rpx"></view>
+<view>订阅状态：{{subscribeStatus?('已订阅'+topic):'未订阅'}}</view>
+<view style="margin-bottom:20rpx"></view>
+<view>ESP32-LED状态：{{LEDStatus?'亮':'灭'}}</view>
+
 <view class="container">
-  <view>
-    <button type="primary" bindtap="connectMQTT">点击</button>
-    <button type="primary" bindtap="sendMessage">开灯</button>
-    <button type="primary" bindtap="sendMessageb">关灯</button>
-  </view>
+  <button class="btn" type="primary" bindtap="connectMQTT">连接MQTT服务器</button>
+  <button class="btn" type="primary" bindtap="subscribeTopic">订阅主题</button>
+  <button class="btn" type="warn" bindtap="disconnectMQTT">断开MQTT服务器连接</button>
+  <button class="btn" type="warn" plain bindtap="openLED">开灯</button>
+  <button class="btn" type="primary" plain bindtap="closeLED">关灯</button>
 </view>
+
+<view style="margin-top:20rpx"></view>
+<view>发送消息</view>
+<view wx:for="{{ sentMessages }}" wx:key="index">{{ item }}</view>
+
+<!-- <view style="margin-top:20rpx"></view>
+<view>接收消息：</view>
+<view wx:for="{{ reveivedMessages }}" wx:key="index">{{ item }}</view> -->
