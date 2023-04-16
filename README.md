@@ -6,6 +6,7 @@
 2. 在阿里云上面开通的服务是“微消息服务队列mqtt版”
 3. 用户控制台是微信小程序
 4. 使用vscode和platformio进行开发
+5. 已提交到官方demo
 
 
 
@@ -23,3 +24,8 @@
    - accessKey和secretKey，这个是阿里云用户的两个字段，可以自行搜索了解
 3. 将miniprogram导入微信开发者工具当中，在`mqttClient.ts`下面进行配置，配置的内容与第二步差不多，但是要注意，微信小程序自己的clientId一定不要与esp32里面设置的clientId一样，因为同一个client只能在线一个地方。
 
+
+
+# 微信小程序截图
+
+![简单demo](https://raw.githubusercontent.com/quarkape/ali-mqtt-esp32/main/mp_screenshot.jpg)
